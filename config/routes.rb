@@ -6,7 +6,9 @@ Turnt::Application.routes.draw do
    root 'welcome#index'
    resources :users
    
-
+   get 'login' => 'sessions#new'
+   post 'creation' => 'sessions#create'
+   delete 'destroy' => 'sessions#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
