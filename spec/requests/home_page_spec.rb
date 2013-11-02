@@ -1,7 +1,5 @@
 require 'spec_helper'
-  
-
-
+include UserHelper
 
 describe "Home page" do
 
@@ -29,6 +27,19 @@ describe "Home page" do
       expect(page).to have_content 'Welcome jojo'
   end  
 
-  it "should reroute"
+  it "should reroute to the same page" do
+    visit '/login'
+      fill_in 'sessions_email',  :with => 'user@example.com'
+      fill_in 'sessions_password', :with => 'caplin'
+      click_button "Save Sessions"
+      expect(page).to have_content 'Welcome jojo'
+  end  
+
+  it "should sign me up" do 
+    sign_up
+    expect(page).to have_content 'Welcome ukubucks'
+  end
+
+    
 
 end

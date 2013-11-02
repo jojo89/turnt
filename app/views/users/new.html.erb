@@ -1,9 +1,12 @@
-<%= form_for @user, :id => "first" do |f| %>
-<%= f.label :email %>
-<%= f.text_field :email %>
-<%= f.label :username %>
-<%= f.text_field :username%>
-<%= f.text_field :password %>
-<%= f.label :password%>
-<%= f.submit %>
+if @user.errors
+  <p><%=@user.errors%></p>
+end
+	<%= form_for @user, :id => "first" do |f| %>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+	<%= f.label :username %>
+	<%= f.text_field :username%>
+	<%= f.text_field :password %>
+	<%= f.label :password%>
+	<%= f.submit %>
 <% end%>
