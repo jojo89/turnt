@@ -3,5 +3,6 @@ class User < ActiveRecord::Base
   has_many :games, through: :scores
   validates :username, length: { minimum: 5 }
   validates :password, length: { minimum: 5 }
+  validates_format_of :email, :with => /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
   has_secure_password
 end

@@ -5,21 +5,21 @@
 	<%= f.text_field :email %>
    <%if @user.errors.messages[:email] %>
      <%@user.errors.messages[:email].each do |e|%>
-       <%= e%>
+       <%= 'email ' + e%>
      <%end%>
    <%end%> 
 	<%= f.label :username %>
 	<%= f.text_field :username%>
 	<%if @user.errors[:username] %>
      <%@user.errors.messages[:username].each do |e|%>
-       <%= e%>
+       <%='username '+ e%>
      <%end%>
    <%end%> 
-	<%= f.text_field :password %>
 	<%= f.label :password%>
+	<%= f.text_field :password %>
 	<%if @user.errors[:password] %>
      <%@user.errors.messages[:password].each do |e|%>
-       <%= e%>
+       <%="password " + e%>
      <%end%>
    <%end%> 
 	<%= f.submit %>
