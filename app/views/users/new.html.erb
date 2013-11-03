@@ -1,12 +1,26 @@
-if @user.errors
-  <p><%=@user.errors%></p>
-end
+<h1>Sign Up to Play </h1>
+
 	<%= form_for @user, :id => "first" do |f| %>
 	<%= f.label :email %>
 	<%= f.text_field :email %>
+   <%if @user.errors.messages[:email] %>
+     <%@user.errors.messages[:email].each do |e|%>
+       <%= e%>
+     <%end%>
+   <%end%> 
 	<%= f.label :username %>
 	<%= f.text_field :username%>
+	<%if @user.errors[:username] %>
+     <%@user.errors.messages[:username].each do |e|%>
+       <%= e%>
+     <%end%>
+   <%end%> 
 	<%= f.text_field :password %>
 	<%= f.label :password%>
+	<%if @user.errors[:password] %>
+     <%@user.errors.messages[:password].each do |e|%>
+       <%= e%>
+     <%end%>
+   <%end%> 
 	<%= f.submit %>
 <% end%>
