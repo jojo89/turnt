@@ -24,30 +24,15 @@ describe "Home page" do
 
   it "should go to sign in" do
     visit '/'
-      click_link("signin")
-      expect(page).to have_content('Password')  
+      click_link("Login")
+      expect(page).to have_content('Please enter your email and password')  
   end  
 
-  
- it "should sign me in " do
-    visit '/login'
-      fill_in 'sessions_email',  :with => 'r@gmail.com'
-      fill_in 'sessions_password', :with => 'password'
-      click_button "Save Sessions"
-      expect(page).to have_content 'Welcome bigbucks'
-  end
-
-
-
-  it "should reroute to the same page" do
-    visit '/login'
-      fill_in 'sessions_email',  :with => 'user@example.com'
-      fill_in 'sessions_password', :with => 'caplin'
-      click_button "Save Sessions"
-      expect(page).to have_content 'Email'
+  it "should go to sign up" do
+    visit '/'
+      click_link("Sign Up")
+      expect(page).to have_content('Sign Up to Play')  
   end  
-
-
 
 
 

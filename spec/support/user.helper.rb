@@ -11,7 +11,12 @@ module UserHelper
 
   def go_to_sign_up
     visit root_path
-      click_link "Sign Up"
+    click_link "Sign Up"
+  end
+
+  def go_to_login 
+    visit root_path
+    click_link "Login"
   end	
 
 end

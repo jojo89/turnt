@@ -1,13 +1,13 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-      <%= link_to "sample app", '#', id: "logo" %>
+      <%= link_to "Sell'em High", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Leader Board",'#' %></li>
           <% if current_user %>
+          <li><%= link_to "Profile", user_path(current_user) %></li>
             <li><%= link_to "Sign out", destroy_path, method: "delete" %></li>
           <% else %>
-          <li><%= link_to "sign in", login_path, id: "signin"%></li>
+             <li><%= link_to "sign in", login_path, id: "signin"%></li>
           <% end%>
         </ul>
       </nav>

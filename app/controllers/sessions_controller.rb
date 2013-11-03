@@ -11,15 +11,17 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to user_path(@user)
       else
-        redirect_to login_path
+        @error="Incorrect Password"
+        render template: "sessions/new"
       end    
     else
-      redirect_to login_path
+      @error="no registered email under that address"
+      render template: "sessions/new"
     end     
   end
 
   def destroy
-    current_user = nil
+    session[:user_id] = nil
     redirect_to root_path
   end  
 
