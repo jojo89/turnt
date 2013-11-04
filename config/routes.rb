@@ -7,6 +7,7 @@ Turnt::Application.routes.draw do
    resources :users
    resources :games
    resources :scores
+   get 'search' => 'games#search'
    
    get 'login' => 'sessions#new'
    post 'creation' => 'sessions#create'

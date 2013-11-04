@@ -1,0 +1,5 @@
+<%= form_tag("/games", method: "get") do %>
+  <%= label_tag(:q, "Search for games:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>

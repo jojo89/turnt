@@ -8,6 +8,7 @@ gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
+  gem 'shoulda-matchers'
 end
 
 # Use SCSS for stylesheets
