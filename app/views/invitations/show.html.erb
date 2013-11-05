@@ -1,0 +1,4 @@
+<h1>You have been invited to <%= @game.name%> with  </h1>o
+<p>Accept the invitation do join the game</p>
+
+<%= link_to "Accept", url_for([@invitation.game, @invitation]), method: :patch %>

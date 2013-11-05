@@ -14,7 +14,11 @@ class UsersController < ApplicationController
   end
 
   def show
+    p params
     @user = User.find(params[:id])
+    p @user.id
+    @invitations= @user.invitations
+    p @invitations
   end  
   
 end

@@ -1,2 +1,7 @@
 <h1>Welcome <%= @user.username %></h1>
 <%=link_to("Search Games",'/search')%>
+<%if @invitations%>
+  <%@invitations.each do |i|%>
+    <%= link_to i.game.name, url_for([i.game, i]) %>
+  <%end%>
+<%end%>  

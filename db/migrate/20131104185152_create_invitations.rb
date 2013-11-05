@@ -4,7 +4,6 @@ class CreateInvitations < ActiveRecord::Migration
       t.integer :user_id
       t.integer :game_id
       t.boolean :started
-
       t.timestamps
     end
   end
