@@ -7,4 +7,25 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 5 }
   validates_format_of :email, :with => /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
   has_secure_password
+
+  def finished_games
+  	finished_gs=[]
+    self.scores.each do |s|
+      if s.game.winner_id != nil
+      	finished_gs << s
+      end	
+    end
+    finished_gs
+  end	
+
+  def ongoing
+    ogames=[]
+    self.scores.each do |s|
+      if s.game.winner_id == nil
+        ogames << s
+      end 
+    end
+    ogames
+  end  
+
 end

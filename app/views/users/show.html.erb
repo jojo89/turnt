@@ -1,7 +1,19 @@
 <h1>Welcome <%= @user.username %></h1>
 <%=link_to("Search Games",'/search')%>
-<%if @invitations%>
-  <%@invitations.each do |i|%>
-    <%= link_to i.game.name, url_for([i.game, i]) %>
+<%if @requests %>
+  <%@requests.each do |i|%>
+    <%= link_to(i, game_score_path(i.game,i), html_options = {method: "patch"})%>
+  <%end%>
+<%end%>  
+
+<%if @ongoing  %>
+  <%@ongoing.each do |i|%>
+    <%= link_to(i, root_path)%>
+  <%end%>
+<%end%>  
+
+<%if @finished  %>
+  <%@finished.each do |i|%>
+    <%= link_to(i, root_path)%>
   <%end%>
 <%end%>  

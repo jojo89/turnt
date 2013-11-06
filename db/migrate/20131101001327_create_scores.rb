@@ -9,6 +9,7 @@ class CreateScores < ActiveRecord::Migration
       t.integer :real_estates
       t.integer :commodities
       t.integer :cash
+      t.boolean :accepted
       t.timestamps
     end
   end

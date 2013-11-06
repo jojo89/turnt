@@ -16,9 +16,11 @@ class UsersController < ApplicationController
   def show
     p params
     @user = User.find(params[:id])
-    p @user.id
-    @invitations= @user.invitations
-    p @invitations
+    @ongoing = @user.ongoing
+    @requests = @user.scores.where(accepted: false)
+    @finished =@user.finished_games
+    @scores = @user.scores
+    p @scores
   end  
   
 end

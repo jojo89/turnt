@@ -25,14 +25,6 @@ ActiveRecord::Schema.define(version: 20131104185542) do
     t.boolean  "started"
   end
 
-  create_table "invitations", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "game_id"
-    t.boolean  "started"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "scores", force: true do |t|
     t.boolean  "turn"
     t.integer  "user_id"
@@ -42,6 +34,7 @@ ActiveRecord::Schema.define(version: 20131104185542) do
     t.integer  "real_estates"
     t.integer  "commodities"
     t.integer  "cash"
+    t.boolean  "accepted"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
