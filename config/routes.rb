@@ -4,11 +4,14 @@ Turnt::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'welcome#index'
-   resources :users
+   resources :users do
+     resources :scores
+   end 
+
+
    resources :games do
      resources :invitations
    end
-   resources :scores
 
    get 'search' => 'games#search'
    
