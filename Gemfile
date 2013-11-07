@@ -6,6 +6,8 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+gem 'faker'
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'shoulda-matchers'
