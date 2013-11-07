@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :user do |f|
+  factory :user, aliases:[:winner] do |f|
   	f.password "password"
   	f.password_confirmation "password"
   	f.email "r@gmail.com"
