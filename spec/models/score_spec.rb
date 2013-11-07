@@ -10,13 +10,9 @@ end
 
 
 
-describe Game do
-  it {should have_many(:scores)}
-  it {should have_many(:players)}
-end  
-
+  
 
 
 	
   
-end 
+
