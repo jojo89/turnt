@@ -1,20 +1,20 @@
 <h1>Welcome <%= @user.username %></h1>
 <%=link_to("Search Games",'/search')%>
   <p>Game Requests</p>
-  <ul class="game">
+  <ul id="requests">
   <%@requests.each do |i|%>
-    <%= link_to(i, game_score_path(i.game,i), html_options = {method: "patch"})%>
+    <%= link_to(i.game.name, game_score_path(i.game,i), html_options = {method: "patch"})%>
   <%end%>
   </ul>
 
   <p>On Going Games</p>
-  <ul class="game">
+  <ul id="ongoing">
   <%@ongoing.each do |i|%>
-    <%= link_to(i, root_path)%>
+    <%= link_to(i.game.name, root_path)%>
   <%end%>
   </ul>
 
-  <ul class="game">
+  <ul id="finished">
   <p>Past Games</p>
 
   <%@finished.each do |i|%>
