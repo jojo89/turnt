@@ -23,7 +23,7 @@ module UserHelper
     go_to_login
     fill_in 'sessions_email',  :with => 'r@gmail.com'
     fill_in 'sessions_password', :with => 'password'
-    click_button "Save Sessions"
+    click_button "Save Sessions"y
   end  
 
 end

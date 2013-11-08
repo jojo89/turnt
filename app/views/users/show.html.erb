@@ -18,6 +18,6 @@
   <p>Past Games</p>
 
   <%@finished.each do |i|%>
-    <li><%= link_to(i.game.name, root_path)%></li>
+    <li><%= link_to(i.game.name, game_path(i.game.id))%></li>
   <%end%>
   </ul>
