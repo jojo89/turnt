@@ -3,14 +3,14 @@
   <p>Game Requests</p>
   <ul id="requests">
   <%@requests.each do |i|%>
-    <%= link_to(i.game.name, game_score_path(i.game,i), html_options = {method: "patch"})%>
+    <li><%= i.game.name%><%= link_to("accept", game_score_path(i.game,i), html_options = {method: "patch"})%></li>
   <%end%>
   </ul>
 
   <p>On Going Games</p>
   <ul id="ongoing">
   <%@ongoing.each do |i|%>
-    <%= link_to(i.game.name, root_path)%>
+    <li><%= link_to(i.game.name, root_path)%></li>
   <%end%>
   </ul>
 
@@ -18,6 +18,6 @@
   <p>Past Games</p>
 
   <%@finished.each do |i|%>
-    <%= link_to(i.game.name, root_path)%>
+    <li><%= link_to(i.game.name, root_path)%></li>
   <%end%>
   </ul>
