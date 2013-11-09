@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20131104185542) do
     t.integer  "stock"
     t.integer  "commodity"
     t.integer  "real_estate"
-    t.integer  "bonds"
+    t.integer  "bond"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"

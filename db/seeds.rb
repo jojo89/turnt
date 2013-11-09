@@ -15,10 +15,10 @@
     
      
 
-  g1=Game.create(name:Faker::Company.name, winner_id:nil, stock: 1,commodity:1,real_estate:1,bonds:1,bonds:1,started:true)
-  g2=Game.create(name:Faker::Company.name, winner_id:user.id, stock: 1,commodity:1,real_estate:1,bonds:1,bonds:1,started:true)
-  g3=Game.create(name:Faker::Company.name, winner_id:nil, stock: 1,commodity:1,real_estate:1,bonds:1,bonds:1,started:false)
-  g4=Game.create(name:Faker::Company.name, winner_id:nil, stock: 1,commodity:1,real_estate:1,bonds:1,bonds:1,started:true)
+  g1=Game.create(name:Faker::Company.name, winner_id:nil, stock: 1,commodity:1,real_estate:1,bond:1,started:true)
+  g2=Game.create(name:Faker::Company.name, winner_id:user.id, stock: 1,commodity:1,real_estate:1,bond:1,started:true)
+  g3=Game.create(name:Faker::Company.name, winner_id:nil, stock: 1,commodity:1,real_estate:1,bond:1,started:false)
+  g4=Game.create(name:Faker::Company.name, winner_id:nil, stock: 1,commodity:1,real_estate:1,bond:1,started:true)
 
 
   Score.create(user_id:1,game_id:g1.id,accepted:true,stocks:71,bonds:1,real_estates:9,commodities:23)

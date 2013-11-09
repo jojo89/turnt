@@ -5,7 +5,7 @@ class CreateGames < ActiveRecord::Migration
       t.integer :stock
       t.integer :commodity
       t.integer :real_estate
-      t.integer :bonds
+      t.integer :bond
       t.timestamps
     end
   end
