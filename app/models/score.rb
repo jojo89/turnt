@@ -12,7 +12,7 @@ class Score < ActiveRecord::Base
   	self.bonds * self.game.bond
   end
 
-  def real_esate_net
+  def real_estate_net
   	self.real_estates * self.game.real_estate
   end
 
@@ -21,7 +21,7 @@ class Score < ActiveRecord::Base
   end
 
   def net
-    self.commodity_net + self.real_esate_net + self.bond_net + self.stock_net + self.cash
+    self.commodity_net + self.real_estate_net + self.bond_net + self.stock_net + self.cash
   end	
 
 end

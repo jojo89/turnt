@@ -19,22 +19,22 @@ describe Score do
   end
   describe "#bond_net" do
   	it "should return the total value of a scores bonds" do
-      
+      expect(@score.bond_net).to eq(4)
   	end 
   end  
   describe "#commodity_net" do
   	it "should return the total value of a scores commodities" do
-      
+       expect(@score.commodity_net).to eq(9) 
   	end 
   end  
   describe "#real_estate_net" do
   	it "should return the total value of a scores real_estate" do
-      
+       expect(@score.real_estate_net).to eq(5)     
   	end 
   end  
-  describe "#stock_net" do
-  	it "should return the total value of a scores stocks" do
-      
+  describe "#net" do
+  	it "should return the total value of all assets" do
+      expect(@score.net).to eq(24)
   	end 
   end	
 end

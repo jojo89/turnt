@@ -5,7 +5,7 @@ FactoryGirl.define do
   	f.stock 1
   	f.commodity 1
   	f.real_estate 1
-  	f.bonds 1
+  	f.bond 1
   	f.started true
   end
 end   
