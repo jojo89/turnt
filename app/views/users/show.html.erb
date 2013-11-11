@@ -1,5 +1,6 @@
 <h1>Welcome <%= @user.username %></h1>
 <%=link_to("Search Games",'/search')%>
+<%=link_to("Create a Game",new_game_path)%>
   <p>Game Requests</p>
   <ul id="requests">
   <%@requests.each do |i|%>
