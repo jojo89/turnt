@@ -6,7 +6,6 @@ describe "profile page" do
 
   before do 
     @user=FactoryGirl.create(:user)
-  
   end 
 
   it "should put unfinished games on the unfinished list" do

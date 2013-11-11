@@ -26,4 +26,9 @@ module UserHelper
     click_button "Save Sessions"
   end  
 
+  def accept_game
+    login
+    click_link "accept" 
+  end  
+
 end
