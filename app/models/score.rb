@@ -3,6 +3,7 @@ class Score < ActiveRecord::Base
   belongs_to :game
   validates :user_id, presence: true
   validates :game_id, presence: true
+  before_save :set_values
 
   def stock_net
   	self.stocks * self.game.stock
@@ -27,5 +28,13 @@ class Score < ActiveRecord::Base
     self.stock_net + 
     self.cash
   end	
+
+  def set_values
+    self.commodities ||= 0
+    self.real_estates ||= 0
+    self.bonds ||= 0
+    self.stocks ||= 0
+    self.cash ||=500
+  end 
 
 end
