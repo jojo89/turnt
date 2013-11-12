@@ -22,6 +22,10 @@ class UsersController < ApplicationController
     @scores = @user.scores
     p @scores
   end  
+
+  def search
+    @users = User.where(username:params[:username])
+  end  
   
 end
 		

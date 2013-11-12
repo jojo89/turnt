@@ -1,0 +1,7 @@
+<%if @users ==[]%>
+  <p> There are no users with that name </p>
+<% else%>
+<% @users.each do |u|%>
+  <li><%= u.username %><%=link_to("Invite Player", root_path)%></li>
+<%end%>
+<%end%>

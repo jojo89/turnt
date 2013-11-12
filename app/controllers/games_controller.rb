@@ -7,7 +7,7 @@ class GamesController < ApplicationController
   def show
     @game=Game.find(params[:id])
     @players=@game.players
-    
+    @user=@players.first
   end	
 
   def new
@@ -18,8 +18,6 @@ class GamesController < ApplicationController
     @game=Game.create(name: params[:name])
     @user= current_user
     @score=Score.create(user_id:@user.id, game_id:@game.id )
-    p @score
-    p @game
     redirect_to(game_path(@game))
   end  
 

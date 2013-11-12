@@ -13,6 +13,7 @@ Turnt::Application.routes.draw do
    end
 
    get 'search' => 'games#search'
+   post 'players' => 'users#search'
    
    get 'login' => 'sessions#new'
    post 'creation' => 'sessions#create'

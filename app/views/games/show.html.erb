@@ -1,4 +1,12 @@
 <%= @game.name%>
+<% if @players.length == 1%>
+<h1>Invite People</h1>
+<%= form_tag("/players") do %>
+  <%= label_tag(:q, "Search for users:") %>
+  <%= text_field_tag(:username) %>
+  <%= submit_tag("Search") %>
+<% end %>
+<% else %>
 
 <table class="player">
   <thead>
@@ -46,3 +54,4 @@
     </tr>
 
 </table>    
+<%end%>
