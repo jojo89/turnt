@@ -4,7 +4,8 @@ class ScoresController < ApplicationController
 
 
   def create
-    
+    Score.create(game_id:params["game_id"],user_id:params["user_id"])
+    redirect_to game_path(params["game_id"])
   end
 
   def update

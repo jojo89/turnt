@@ -4,9 +4,17 @@
 <%= form_tag("/players") do %>
   <%= label_tag(:q, "Search for users:") %>
   <%= text_field_tag(:username) %>
+  <%= hidden_field_tag(:game, @game.id)%>
   <%= submit_tag("Search") %>
 <% end %>
 <% else %>
+<h1>Invite Some More People</h1>
+<%= form_tag("/players") do %>
+  <%= label_tag(:q, "Search for users:") %>
+  <%= text_field_tag(:username) %>
+  <%= hidden_field_tag(:game, @game.id)%>
+  <%= submit_tag("Search") %>
+<% end %>
 
 <table class="player">
   <thead>

@@ -2,6 +2,12 @@
   <p> There are no users with that name </p>
 <% else%>
 <% @users.each do |u|%>
-  <li><%= u.username %><%=link_to("Invite Player", root_path)%></li>
+  <li>
+  <%= u.username %><%=form_tag(game_scores_path(@game)) do%>
+  <%= hidden_field_tag("user_id", u.id )%>
+  <%= submit_tag("Invite Player")%>
+  <% end %>
+
+  </li>
 <%end%>
 <%end%>
