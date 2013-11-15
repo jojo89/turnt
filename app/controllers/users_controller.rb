@@ -25,6 +25,7 @@ class UsersController < ApplicationController
 
   def search
     @game = Game.find(params["game"])
+    @players = @game.players
     @users = User.where(username:params[:username])
   
   end  
