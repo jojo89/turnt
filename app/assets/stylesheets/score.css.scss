@@ -1,9 +1,9 @@
 $main-color: #F80000;
 
-@mixin rc{
-  border-radius: 10px;
-  -moz-border-radius:10px;
-  -webkit-border-radius: 10px; 
+@mixin rc($radius){
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius; 
 }
 .unaccepted{
   color:red;
@@ -18,9 +18,9 @@ nav {
   margin: 0 auto;
   h1 {
   	background: $main-color;
+    @include rc(10px);
   	a{
       color:green;
-      @include rc;
     }
   }
 
