@@ -1,37 +1,40 @@
 $main-color: #F80000;
 
+@mixin rc{
+  border-radius: 10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius: 10px; 
+}
 .unaccepted{
   color:red;
 }
 
 header{
-	background-color:darken($main-color,15%);
+	
 }
 
 nav {
   width: 800px;
   margin: 0 auto;
   h1 {
-    margin: 10px 0;
-    padding: 0;
-    float: left;
-    color: $main-color;
-    font-size: 28px;
+  	background: $main-color;
+  	a{
+      color:green;
+      @include rc;
+    }
   }
+
   ul {
     float: right;
     list-style: none;
     li {
       display: inline-block;
-      color: $main-color;
       margin: 0 20px;
       a {
         color: $main-color;
       }
     }
   }
-
-
 }
 
 
