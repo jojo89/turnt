@@ -21,7 +21,11 @@
     <tr class="users">
       <th>Players</th>
       <%@players.each do |p|%>
-      <th><%= p.username%></th>
+      <th><%= p.username%>
+      <%if p.scores.find_by_game_id(@game.id).accepted != true  %>
+        <%= "Unaccepted" %>
+      <% end %>  
+      </th>
       <% end%>  
     </tr>
  </thead>   

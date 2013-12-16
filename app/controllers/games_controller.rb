@@ -17,7 +17,7 @@ class GamesController < ApplicationController
   def create
     @game=Game.create(name: params[:name])
     @user= current_user
-    @score=Score.create(user_id:@user.id, game_id:@game.id )
+    @score=Score.create(user_id:@user.id, game_id:@game.id, accepted:true )
     redirect_to(game_path(@game))
   end  
 
