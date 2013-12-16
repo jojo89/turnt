@@ -19,7 +19,9 @@ class User < ActiveRecord::Base
 
   def ongoing
     ogames=[]
-    self.scores.each do |s|
+    accepted = self.scores.where(accepted:true)
+    p accepted
+    accepted.each do |s|
       if s.game.winner_id == nil
         ogames << s
       end 

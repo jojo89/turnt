@@ -1,0 +1,38 @@
+$main-color: #F80000;
+
+.unaccepted{
+  color:red;
+}
+
+header{
+	background-color:darken($main-color,15%);
+}
+
+nav {
+  width: 800px;
+  margin: 0 auto;
+  h1 {
+    margin: 10px 0;
+    padding: 0;
+    float: left;
+    color: $main-color;
+    font-size: 28px;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      display: inline-block;
+      color: $main-color;
+      margin: 0 20px;
+      a {
+        color: $main-color;
+      }
+    }
+  }
+
+
+}
+
+
+

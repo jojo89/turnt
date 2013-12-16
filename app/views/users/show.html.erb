@@ -11,7 +11,7 @@
   <p>On Going Games</p>
   <ul id="ongoing">
   <%@ongoing.each do |i|%>
-    <li><%= link_to(i.game.name, root_path)%></li>
+    <li><%= link_to(i.game.name, game_path(i.game.id))%></li>
   <%end%>
   </ul>
 

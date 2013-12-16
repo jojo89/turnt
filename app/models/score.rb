@@ -30,6 +30,7 @@ class Score < ActiveRecord::Base
   end	
 
   def set_values
+    self.accepted ||= false
     self.commodities ||= 0
     self.real_estates ||= 0
     self.bonds ||= 0
