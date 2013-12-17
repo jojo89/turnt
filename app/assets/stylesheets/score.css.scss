@@ -1,4 +1,5 @@
-$main-color: #F80000;
+$main-color: rgb(255, 253, 253);
+$main-font:'Nova Square', cursive;
 
 @mixin rc($radius){
   border-radius: $radius;
@@ -9,18 +10,33 @@ $main-color: #F80000;
   color:red;
 }
 
+body{
+  font-family: $main-font;
+}
+
 header{
 	
 }
 
+
+
 nav {
-  width: 800px;
+  top: 0px;
+  width: 100%;
   margin: 0 auto;
+  position: fixed;
+  background-color: black;
   h1 {
   	background: $main-color;
+    display: inline;
     @include rc(10px);
-  	a{
-      color:green;
+    margin: 0 20px;
+
+    a{
+      color: white;
+      text-decoration: none;
+      position: absolute;
+      bottom: 10px;
     }
   }
 
@@ -32,6 +48,7 @@ nav {
       margin: 0 20px;
       a {
         color: $main-color;
+        text-decoration: none;
       }
     }
   }
