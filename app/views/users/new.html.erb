@@ -1,26 +1,35 @@
-<h1>Sign Up to Play </h1>
-
-	<%= form_for @user, :id => "first" do |f| %>
-	<%= f.label :email %>
-	<%= f.text_field :email %>
-   <%if @user.errors.messages[:email] %>
-     <%@user.errors.messages[:email].each do |e|%>
-       <%= 'email ' + e%>
-     <%end%>
-   <%end%> 
-	<%= f.label :username %>
-	<%= f.text_field :username%>
-	<%if @user.errors[:username] %>
-     <%@user.errors.messages[:username].each do |e|%>
-       <%='username '+ e%>
-     <%end%>
-   <%end%> 
-	<%= f.label :password%>
-	<%= f.text_field :password %>
-	<%if @user.errors[:password] %>
-     <%@user.errors.messages[:password].each do |e|%>
-       <%="password " + e%>
-     <%end%>
-   <%end%> 
-	<%= f.submit %>
-<% end%>
+<div class="container">
+  <h1>Sign Up to Play </h1>
+    <ul id="new_user_list">
+  	<%= form_for @user, :id => "first" do |f| %>
+  	<li>
+      <%= f.label :email %>
+  	  <%= f.text_field :email %>
+    </li>  
+     <%if @user.errors.messages[:email] %>
+       <%@user.errors.messages[:email].each do |e|%>
+         <li><%= 'email ' + e%></li>
+       <%end%>
+     <%end%> 
+    <li>
+  	  <%= f.label :username %>
+  	  <%= f.text_field :username%>
+    </li>
+  	<%if @user.errors[:username] %>
+       <%@user.errors.messages[:username].each do |e|%>
+         <li><%='username '+ e%></li>
+       <%end%>
+     <%end%> 
+    <li>
+  	  <%= f.label :password%>
+  	  <%= f.text_field :password %>
+    </li>  
+  	<%if @user.errors[:password] %>
+      <%@user.errors.messages[:password].each do |e|%>
+        <li><%="password " + e%></li>
+       <%end%>
+     <%end%> 
+  	<li><%= f.submit %></li>
+  <% end%>
+  </ul>
+</div>
